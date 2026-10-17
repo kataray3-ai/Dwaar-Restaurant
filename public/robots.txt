@@ -1,0 +1,37 @@
+# robots.txt for Dwaar Heritage & Sky Lounge | Dwarka Sector 12, Delhi
+# Optimized for Googlebot, Bingbot, and Generative AI engines (GEO / AEO)
+
+User-agent: *
+Allow: /
+Disallow: /api/private/
+Disallow: /checkout/session/
+
+# Generative AI & Search Answer Crawlers (GEO / AEO)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemaps & Structured LLM Context
+Sitemap: https://dwaardwarka.in/sitemap.xml
+LLMs-Txt: https://dwaardwarka.in/llms.txt
+LLMs-Full-Txt: https://dwaardwarka.in/llms-full.txt

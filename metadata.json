@@ -1,0 +1,8 @@
+{
+  "name": "Dwaar Heritage & Sky Lounge - Best Restaurant in Dwarka",
+  "description": "Top-rated luxury restaurant and romantic rooftop lounge in Dwarka Sector 12, Delhi. Authentic North Indian, Mughlai, weekend buffet, pure veg & jain options, and celebration venue.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
