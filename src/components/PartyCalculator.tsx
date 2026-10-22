@@ -53,11 +53,8 @@ export const PartyCalculator: React.FC<PartyProps> = ({ onOpenReservation }) => 
 
   const currentTier = tiers[selectedTier];
   const totalCost = guestCount * currentTier.pricePerPerson;
-
-  const handleWhatsAppInquiry = () => {
-    const text = `Hi Dwaar Dwarka, I want to book a ${eventType} party for ${guestCount} guests under the ${currentTier.name} package (Est. ₹${totalCost.toLocaleString('en-IN')}). Please confirm date availability.`;
-    window.open(`https://wa.me/919811039227?text=${encodeURIComponent(text)}`, '_blank');
-  };
+  const whatsAppText = `Hi Dwaar Dwarka, I want to book a ${eventType} party for ${guestCount} guests under the ${currentTier.name} package (Est. ₹${totalCost.toLocaleString('en-IN')}). Please confirm date availability.`;
+  const whatsAppUrl = `https://wa.me/919811039227?text=${encodeURIComponent(whatsAppText)}`;
 
   return (
     <section id="parties" className="py-20 md:py-28 bg-[#0D1220] relative">
@@ -204,13 +201,15 @@ export const PartyCalculator: React.FC<PartyProps> = ({ onOpenReservation }) => 
 
               {/* Action buttons */}
               <div className="space-y-2.5">
-                <button
-                  onClick={handleWhatsAppInquiry}
+                <a
+                  href={whatsAppUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-bold py-3 px-4 rounded-xl shadow-lg shadow-emerald-500/20 transition-all cursor-pointer text-xs sm:text-sm"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Lock Date &amp; Quote on WhatsApp</span>
-                </button>
+                </a>
 
                 <button
                   onClick={onOpenReservation}

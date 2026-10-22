@@ -43,10 +43,8 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onCl
     setStep('confirmation');
   };
 
-  const handleShareToWhatsApp = () => {
-    const text = `*DWAAR TABLE RESERVATION CONFIRMED*\nRef: ${bookingCode}\nGuest: ${name}\nArea: ${area.toUpperCase()}\nGuests: ${guests}\nDate: ${date}\nTime: ${timeSlot}\nOccasion: ${occasion}\n\nVenue: Dwaar Heritage & Sky Lounge, Sector 12 Dwarka (Opp. Pillar 1042)`;
-    window.open(`https://wa.me/919811039227?text=${encodeURIComponent(text)}`, '_blank');
-  };
+  const whatsAppConfirmationText = `*DWAAR TABLE RESERVATION CONFIRMED*\nRef: ${bookingCode}\nGuest: ${name}\nArea: ${area.toUpperCase()}\nGuests: ${guests}\nDate: ${date}\nTime: ${timeSlot}\nOccasion: ${occasion}\n\nVenue: Dwaar Heritage & Sky Lounge, Sector 12 Dwarka (Opp. Pillar 1042)`;
+  const whatsAppUrl = `https://wa.me/919811039227?text=${encodeURIComponent(whatsAppConfirmationText)}`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto">
@@ -302,13 +300,15 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onCl
 
             {/* Actions */}
             <div className="space-y-2.5">
-              <button
-                onClick={handleShareToWhatsApp}
+              <a
+                href={whatsAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-bold py-3.5 rounded-xl text-xs sm:text-sm shadow-lg shadow-emerald-500/20 transition-all cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Save Pass &amp; Share to WhatsApp</span>
-              </button>
+              </a>
 
               <button
                 onClick={onClose}

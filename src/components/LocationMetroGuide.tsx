@@ -11,10 +11,6 @@ export const LocationMetroGuide: React.FC = () => {
     { sector: 'IGI Airport (T3 & Aerocity)', time: '12 Mins Drive', note: 'Via Northern Peripheral / Dwarka Tunnel' },
   ];
 
-  const handleOpenGoogleMaps = () => {
-    window.open('https://maps.google.com/?q=Dwaar+Heritage+Restaurant+Dwarka+Sector+12+New+Delhi', '_blank');
-  };
-
   return (
     <section id="location" className="py-20 md:py-28 bg-[#0B0F19] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
@@ -82,13 +78,15 @@ export const LocationMetroGuide: React.FC = () => {
               </div>
 
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
-                <button
-                  onClick={handleOpenGoogleMaps}
+                <a
+                  href="https://maps.google.com/?q=Dwaar+Heritage+Restaurant+Dwarka+Sector+12+New+Delhi"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold py-3 rounded-xl text-xs shadow-md transition-all cursor-pointer"
                 >
                   <Navigation className="w-4 h-4" />
                   <span>Get Driving Route on Google Maps</span>
-                </button>
+                </a>
 
                 <a
                   href="tel:+919811039227"
