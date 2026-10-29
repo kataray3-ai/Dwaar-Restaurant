@@ -111,6 +111,9 @@ export const LocationMetroGuide: React.FC = () => {
                   src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80"
                   alt="Dwarka Delhi restaurant map location"
                   className="w-full h-full object-cover opacity-40"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80';
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-transparent to-black/40"></div>
 

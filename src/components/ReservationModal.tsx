@@ -46,8 +46,20 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onCl
   const whatsAppConfirmationText = `*DWAAR TABLE RESERVATION CONFIRMED*\nRef: ${bookingCode}\nGuest: ${name}\nArea: ${area.toUpperCase()}\nGuests: ${guests}\nDate: ${date}\nTime: ${timeSlot}\nOccasion: ${occasion}\n\nVenue: Dwaar Heritage & Sky Lounge, Sector 12 Dwarka (Opp. Pillar 1042)`;
   const whatsAppUrl = `https://wa.me/919811039227?text=${encodeURIComponent(whatsAppConfirmationText)}`;
 
+  const handleModalClose = () => {
+    onClose();
+    setTimeout(() => {
+      setStep('details');
+    }, 300);
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto">
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) handleModalClose();
+      }}
+    >
       <div className="relative w-full max-w-xl bg-[#0F1422] border border-amber-500/40 rounded-3xl shadow-2xl overflow-hidden my-auto text-zinc-100">
         
         {/* Header */}
@@ -67,7 +79,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onCl
           </div>
 
           <button
-            onClick={onClose}
+            onClick={handleModalClose}
             className="p-2 rounded-lg bg-zinc-800 text-zinc-400 hover:text-white transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
@@ -311,7 +323,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onCl
               </a>
 
               <button
-                onClick={onClose}
+                onClick={handleModalClose}
                 className="w-full py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs transition-colors cursor-pointer"
               >
                 Close &amp; Return to Website

@@ -154,6 +154,9 @@ export const MenuSection: React.FC<MenuProps> = ({ onOpenReservation }) => {
                   src={item.image}
                   alt={`${item.name} - best restaurant in Dwarka`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80';
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-transparent to-black/30"></div>
 
@@ -279,6 +282,9 @@ export const MenuSection: React.FC<MenuProps> = ({ onOpenReservation }) => {
                 src={selectedDish.image}
                 alt={selectedDish.name}
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80';
+                }}
               />
               <button
                 onClick={() => setSelectedDish(null)}

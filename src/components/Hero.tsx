@@ -110,6 +110,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation, onExploreMenu }) 
                     src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80"
                     alt="Best restaurant in Dwarka - Dwaar Heritage & Sky Lounge royal indoor dining"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80';
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-black/30"></div>
                   

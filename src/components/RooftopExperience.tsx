@@ -42,6 +42,9 @@ export const RooftopExperience: React.FC<RooftopProps> = ({ onOpenReservation })
                   src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
                   alt="Romantic rooftop cafe in Dwarka Delhi - Dwaar Sky Lounge cabanas and sunset"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80';
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-3 left-3 text-white">
@@ -55,6 +58,9 @@ export const RooftopExperience: React.FC<RooftopProps> = ({ onOpenReservation })
                   src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80"
                   alt="Late night dining and cocktails in Dwarka Delhi rooftop bar"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80';
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-3 left-3 text-white">
@@ -70,6 +76,9 @@ export const RooftopExperience: React.FC<RooftopProps> = ({ onOpenReservation })
                   src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80"
                   alt="Live music and acoustic guitar night Dwarka rooftop cafe"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80';
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-3 left-3 text-white">
@@ -83,6 +92,9 @@ export const RooftopExperience: React.FC<RooftopProps> = ({ onOpenReservation })
                   src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=800&q=80"
                   alt="Rooftop cafe Dwarka night lighting and cityscape"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80';
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-3 left-3 text-white">

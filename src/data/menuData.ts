@@ -197,7 +197,7 @@ export const MENU_ITEMS: MenuItem[] = [
     isGlutenFree: true,
     spiceLevel: 2,
     description: 'Slow-cooked Himalayan mutton shanks in an aromatic Kashmiri red chilli and Ratan Jot infused rich jus.',
-    image: 'https://images.unsplash.com/photo-1545247181-516773ca838b?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80',
     calories: '560 kcal',
   },
 
